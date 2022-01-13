@@ -15,8 +15,8 @@ export class SearchpersonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  searchPerson() {
-    this.data = this.personService.searchPerson(this.id.value);
+  async searchPerson() {
+    this.data = await this.personService.searchPerson(this.id.value);
   }
 
 }

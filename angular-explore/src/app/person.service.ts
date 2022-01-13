@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -7,7 +8,7 @@ export class PersonService {
 
   persons:{ [key: number]: Person } = {};
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   addPerson(id:number,name:String,age:number) {
     if(this.persons[id]==undefined){
@@ -33,8 +34,20 @@ export class PersonService {
     return "DELETED person with id:"+id;
   }
 
-  searchPerson(id:number){
+  async searchPerson(id:number){
+    if(id==1111) {
+      let data = await this.http.get("/getPersonAtId1111", {responseType: 'text'}).toPromise();;
+      //promise.then((data)=>{
+        let pd = JSON.parse(data);
+        console.log("Promise resolved with: " + pd);
+        this.persons[id] = new Person(pd['name']);
+        this.persons[id].setAge(pd['age']);
+      /*}).catch((error)=>{
+        console.log("Promise rejected with " + JSON.stringify(error));
+      });*/
+    }
     return (this.persons[id]==undefined?"Not found":(this.persons[id].getName()+", aged "+this.persons[id].getAge()));
+    
   }
 }
 

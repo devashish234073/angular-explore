@@ -8,6 +8,7 @@ import { AddpersonComponent } from './addperson/addperson.component';
 import { DeletepersonComponent } from './deleteperson/deleteperson.component';
 import { SearchpersonComponent } from './searchperson/searchperson.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       {path:"addPerson",component:AddpersonComponent},
