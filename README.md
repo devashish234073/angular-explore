@@ -26,3 +26,10 @@ Modified login component to show loginSuccess component when succeed.
 
 Added three new components {add,delete,search}person and person service
 ![image](https://user-images.githubusercontent.com/20777854/149298204-c3e4ee15-dff2-477c-853d-61c00eea8d3a.png)
+
+In app.module.ts added RouterModule.forRoot
+![image](https://user-images.githubusercontent.com/20777854/149313234-7348ca5b-f7a4-4840-81b2-b975196ec565.png)
+
+In loginsuccess comonent added routerLinks and router outlets:
+![image](https://user-images.githubusercontent.com/20777854/149313406-844e57be-7bc5-4713-a557-76b04df2225b.png)
+
