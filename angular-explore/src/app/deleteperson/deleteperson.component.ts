@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonService } from '../person.service';
 
 @Component({
   selector: 'app-deleteperson',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeletepersonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private personService:PersonService) { }
 
   ngOnInit(): void {
   }
