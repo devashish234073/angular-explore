@@ -3,14 +3,6 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-class Person{
-  id:number = 0;
-  age:number = 0;
-  constructor(private name:String){}
-  setId(id:number) {this.id=id;}
-  setAge(age:number) {this.age=age;}
-  setName(name:String) {this.name=name;}
-}
 export class PersonService {
 
   persons:{ [key: number]: Person } = {};
@@ -37,4 +29,13 @@ export class PersonService {
   searchPerson(id:number){
     return this.persons[id];
   }
+}
+
+class Person{
+  id:number = 0;
+  age:number = 0;
+  constructor(private name:String){}
+  setId(id:number) {this.id=id;}
+  setAge(age:number) {this.age=age;}
+  setName(name:String) {this.name=name;}
 }

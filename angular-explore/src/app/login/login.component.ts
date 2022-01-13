@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { LoginserviceService } from '../loginservice.service';
 import { CustomValidators } from './custom.validators';
 
 @Component({
@@ -9,7 +10,7 @@ import { CustomValidators } from './custom.validators';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService:LoginserviceService) { }
 
   ngOnInit(): void {
   }
@@ -17,14 +18,16 @@ export class LoginComponent implements OnInit {
   username = new FormControl('', [Validators.required, CustomValidators.cannotContainSpace]);
   password = new FormControl('', [Validators.required]);
 
-  loginStatus = "not done";
-
   login() {
     if(this.username.value!="devadeva" || this.password.value!="devadeva") {
-      this.loginStatus = "failed";
+      this.loginService.setLoginStatus("failed");
     } else {
-      this.loginStatus = "success";
+      this.loginService.setLoginStatus("success");
     }
+  }
+
+  getLoginStatus() {
+    return this.loginService.getLoginStatus();
   }
 
 }

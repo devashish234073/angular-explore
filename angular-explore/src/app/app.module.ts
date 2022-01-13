@@ -7,6 +7,7 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { AddpersonComponent } from './addperson/addperson.component';
 import { DeletepersonComponent } from './deleteperson/deleteperson.component';
 import { SearchpersonComponent } from './searchperson/searchperson.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,12 @@ import { SearchpersonComponent } from './searchperson/searchperson.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {path:"addPerson",component:AddpersonComponent},
+      {path:"deletePerson",component:DeletepersonComponent},
+      {path:"searchPerson",component:SearchpersonComponent},
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
