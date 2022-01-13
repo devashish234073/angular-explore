@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { PersonService } from '../person.service';
 
 @Component({
@@ -9,8 +10,13 @@ import { PersonService } from '../person.service';
 export class SearchpersonComponent implements OnInit {
 
   constructor(private personService:PersonService) { }
-
+  id:FormControl = new FormControl('');
+  data:string = "";
   ngOnInit(): void {
+  }
+
+  searchPerson() {
+    this.data = this.personService.searchPerson(this.id.value);
   }
 
 }

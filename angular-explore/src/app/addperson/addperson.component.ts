@@ -13,4 +13,10 @@ export class AddpersonComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  id:number=0;
+  name:String="";
+  age:number=0;
+  addPerson() {
+    this.personService.addPerson(this.id,this.name,this.age);
+  }
 }
