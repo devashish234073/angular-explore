@@ -33,3 +33,10 @@ In app.module.ts added RouterModule.forRoot
 In loginsuccess comonent added routerLinks and router outlets:
 ![image](https://user-images.githubusercontent.com/20777854/149313406-844e57be-7bc5-4713-a557-76b04df2225b.png)
 
+Updated add,delete and search Person 
+addPerson is using two way binding to get the field data
+![image](https://user-images.githubusercontent.com/20777854/149321063-6c003a8a-162c-424a-aecb-b5aca1166e40.png)
+deletePerson and searchPerson are using FormControl for data binding
+![image](https://user-images.githubusercontent.com/20777854/149320944-11658f3e-b232-44fd-b41e-d1e4eba27836.png)
+
+
