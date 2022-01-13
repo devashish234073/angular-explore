@@ -1,5 +1,5 @@
 <div *ngIf="loginStatus=='failed'">Error Credentials....</div>
-<div *ngIf="loginStatus=='success'">Login Success....</div>
+<div *ngIf="loginStatus=='success'"><app-loginsuccess></app-loginsuccess></div>
 <form (ngSubmit)="login()" *ngIf="loginStatus!='success'">
   <div>
     <input [formControl]="username" type="text"/>
