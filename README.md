@@ -2,6 +2,8 @@
 this is a repo to explore various things we can do in angular , kind of like a tutorial 
 
 The build.sh can be run to build the angular app and 'npm start' will run the app
+
+For Person search with id 1111, an api call happens which is taken care by the node app, on Angular side, use of HttpClient is demonstrated
 # changes on component create
 
 ![image](https://user-images.githubusercontent.com/20777854/149267083-c07468d3-f646-4cd4-a1c9-9eb11b6bec6e.png)
