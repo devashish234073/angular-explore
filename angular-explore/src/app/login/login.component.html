@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div *ngIf="loginStatus=='failed'">Error Credentials....</div>
+<div *ngIf="loginStatus=='success'">Login Success....</div>
+<form (ngSubmit)="login()" *ngIf="loginStatus!='success'">
+  <div>
+    <input [formControl]="username" type="text"/>
+    <div *ngIf="username.touched">
+    <div *ngIf="username.errors?.['required']">Username is required</div>
+    <div *ngIf="username.errors?.['cannotContainSpace']">Username can not contain space</div>
+    </div>
+  </div>
+  <div>
+    <input [formControl]="password" type="password"/>
+    <div *ngIf="password.touched">
+    <div *ngIf="password.errors?.['required']">password is required</div>
+    </div>
+  </div>
+  <button type="submit">Sign Up</button>
+</form>
