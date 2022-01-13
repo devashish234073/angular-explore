@@ -18,3 +18,9 @@ Html changes:
 Custom Validation in typescript
 ![image](https://user-images.githubusercontent.com/20777854/149295792-1271acc8-1d2f-4c28-a403-a7fce97087c7.png)
 
+Added loginSuccess component
+![image](https://user-images.githubusercontent.com/20777854/149296624-e6957e34-813f-444c-8215-b4cbeabe20a0.png)
+
+Modified login component to show loginSuccess component when succeed.
+![image](https://user-images.githubusercontent.com/20777854/149296745-342a79d5-cb50-433f-9f62-9c9b6061d2fd.png)
+
