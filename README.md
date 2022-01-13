@@ -24,3 +24,5 @@ Added loginSuccess component
 Modified login component to show loginSuccess component when succeed.
 ![image](https://user-images.githubusercontent.com/20777854/149296745-342a79d5-cb50-433f-9f62-9c9b6061d2fd.png)
 
+Added three new components {add,delete,search}person and person service
+![image](https://user-images.githubusercontent.com/20777854/149298204-c3e4ee15-dff2-477c-853d-61c00eea8d3a.png)
